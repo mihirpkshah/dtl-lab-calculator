@@ -1,0 +1,104 @@
+(base) mihir@Mihirs-MacBook-Air calculator % git checkout -b decimal-calc
+Switched to a new branch 'decimal-calc'
+(base) mihir@Mihirs-MacBook-Air calculator % git checkout -b main
+Switched to a new branch 'main'
+(base) mihir@Mihirs-MacBook-Air calculator % git checkout -b hex-calc
+Switched to a new branch 'hex-calc'
+(base) mihir@Mihirs-MacBook-Air calculator % git branches
+git: 'branches' is not a git command. See 'git --help'.
+(base) mihir@Mihirs-MacBook-Air calculator % git branch  
+  decimal-calc
+* hex-calc
+  main
+  master
+(base) mihir@Mihirs-MacBook-Air calculator % vim calc.c 
+(base) mihir@Mihirs-MacBook-Air calculator % git diff
+diff --git a/calc.c b/calc.c
+index fe1925d..4286b0c 100644
+--- a/calc.c
++++ b/calc.c
+@@ -1,49 +1,107 @@
+ #include <stdio.h>
+-#include <math.h> // Required for pow()
++#include <stdlib.h>
++#include <math.h>
+ 
+ int main() {
+-    double num1, num2, result;
++    char mode;
++    char num1_str[20], num2_str[20];
++    double result = 0;
+     char operator;
++    int num1_int, num2_int;
++    double num1_dec, num2_dec;
+ 
+-    printf("Simple Calculator\n");
+-    printf("-----------------\n");
+-    printf("Enter first number: ");
+-    scanf("%lf", &num1);
+-
+-    printf("Enter an operator (+, -, *, /, ^): ");
+-    scanf(" %c", &operator);  // Note the space before %c
+-
+-    printf("Enter second number: ");
+-    scanf("%lf", &num2);
+-
+-    switch (operator) {
+-        case '+':
+-            result = num1 + num2;
+-            printf("Result: %.2lf + %.2lf = %.2lf\n", num1, num2, result);
+-            break;
+-        case '-':
+-            result = num1 - num2;
+-            printf("Result: %.2lf - %.2lf = %.2lf\n", num1, num2, result);
+-            break;
+-        case '*':
+-            result = num1 * num2;
+-            printf("Result: %.2lf * %.2lf = %.2lf\n", num1, num2, result);
+-            break;
+-        case '/':
+-            if (num2 == 0) {
+-                printf("Error: Division by zero is not allowed.\n");
+-            } else {
+-                result = num1 / num2;
+-                printf("Result: %.2lf / %.2lf = %.2lf\n", num1, num2, result);
+-            }
+-            break;
+-        case '^':
+-            result = pow(num1, num2);
+-            printf("Result: %.2lf ^ %.2lf = %.2lf\n", num1, num2, result);
+-            break;
+-        default:
+-            printf("Invalid operator.\n");
++    printf("Choose calculation mode:\n");
++    printf("  h - Hexadecimal\n");
++    printf("  d - Decimal\n");
+(base) mihir@Mihirs-MacBook-Air calculator % git add calc.c 
+(base) mihir@Mihirs-MacBook-Air calculator % git commit -m "Added Support For Hex Calculations"
+[hex-calc 7f90e14] Added Support For Hex Calculations
+ 1 file changed, 98 insertions(+), 40 deletions(-)
+(base) mihir@Mihirs-MacBook-Air calculator % 
+
+(base) mihir@Mihirs-MacBook-Air calculator % git merge decimal-calc 
+Already up to date.
+(base) mihir@Mihirs-MacBook-Air calculator % git merge main        
+Already up to date.
+(base) mihir@Mihirs-MacBook-Air calculator % git log       
+commit 7f90e14185ee31586abda2bf277e712a25d0911c (HEAD -> hex-calc)
+Author: Mihir Shah <mihirpkshah@gmail.com>
+Date:   Fri Apr 11 14:23:12 2025 +0530
+
+    Added Support For Hex Calculations
+
+commit a43433cea367b38743eb5758c5958a7f0f55f816 (master, main, decimal-calc)
+Author: Mihir Shah <mihirpkshah@gmail.com>
+Date:   Fri Apr 11 14:17:33 2025 +0530
+
+    Added Exponent
+
+commit 7d44273a9f03b0c053c07a14c1222ab884b69155
+Author: Mihir Shah <mihirpkshah@gmail.com>
+Date:   Fri Apr 11 14:12:22 2025 +0530
+
+    Initial Calculator
+(base) mihir@Mihirs-MacBook-Air calculator % 
