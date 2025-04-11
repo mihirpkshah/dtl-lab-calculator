@@ -51,7 +51,10 @@ int main() {
             case '^':
                 result = pow(num1_int, num2_int);
                 break;
-            default:
+            case '%':
+	    	result = num1_int % num2_int;
+		break;
+	    default:
                 printf("Invalid operator.\n");
                 return 1;
         }
@@ -91,6 +94,9 @@ int main() {
             case '^':
                 result = pow(num1_dec, num2_dec);
                 break;
+	    case '%':
+	    	result = num1_dec % num2_dec;
+		break;
             default:
                 printf("Invalid operator.\n");
                 return 1;
