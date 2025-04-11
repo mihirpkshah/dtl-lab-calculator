@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+
+
 #include <stdbool.h>
 
 bool even (int n){
@@ -9,6 +11,7 @@ bool even (int n){
 bool odd (int n){
 	return (n & 1);
 }
+
 
 #include <string.h>
 
