@@ -54,6 +54,7 @@ index be3f7e6..fe1925d 100644
 +            result = pow(num1, num2);
 +            printf("Result: %.2lf ^ %.2lf = %.2lf\n", num1, num2, result);
 +            break;
+
 (base) mihir@Mihirs-MacBook-Air calculator % git status
 On branch master
 Changes not staged for commit:
@@ -62,4 +63,30 @@ Changes not staged for commit:
 	modified:   calc.c
 
 no changes added to commit (use "git add" and/or "git commit -a")
+(base) mihir@Mihirs-MacBook-Air calculator % git add calc.c
+(base) mihir@Mihirs-MacBook-Air calculator % git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   calc.c
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	q1.txt
+
+(base) mihir@Mihirs-MacBook-Air calculator % git add .
+(base) mihir@Mihirs-MacBook-Air calculator % git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   calc.c
+	new file:   q1.txt
+
+(base) mihir@Mihirs-MacBook-Air calculator % git commit -m "Added Exponent"
+[master a43433c] Added Exponent
+ 2 files changed, 81 insertions(+), 7 deletions(-)
+ create mode 100644 q1.txt
+(base) mihir@Mihirs-MacBook-Air calculator % git status
+On branch master
+nothing to commit, working tree clean
 (base) mihir@Mihirs-MacBook-Air calculator % 
