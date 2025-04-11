@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <stdbool.h>
+
+bool even (int n){
+	return !(n & 1);
+}
+bool odd (int n){
+	return (n & 1);
+}
+
 #include <string.h>
 
 int main() {
@@ -109,5 +118,16 @@ int main() {
         printf("Invalid mode selected.\n");
     }
 
+	int oddn;
+	printf("Enter the number to check if it is odd : ");
+	scanf("%d", &oddn);
+	if(odd(oddn)) printf("The number %d is odd", oddn);
+	else printf("The number %d is even", oddn);
+
+	int evenn;
+	printf("Enter the number to check if it is even : ");
+	scanf("%d", &evenn);
+	if(even(evenn)) printf("The number %d is even", evenn);
+	else printf("The number %d is odd", evenn);
     return 0;
 }
