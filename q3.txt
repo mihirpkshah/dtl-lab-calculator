@@ -1,0 +1,24 @@
+(base) mihir@Mihirs-MacBook-Air calculator % git config user.email
+mihirpkshah@gmail.com
+(base) mihir@Mihirs-MacBook-Air calculator % git remote add origin https://github.com/mihirpkshah/dtl-lab-calculator.git
+git branch -M main
+git push -u origin main
+
+remote: Permission to mihirpkshah/dtl-lab-calculator.git denied to mihirshahxenlabs.
+fatal: unable to access 'https://github.com/mihirpkshah/dtl-lab-calculator.git/': The requested URL returned error: 403
+(base) mihir@Mihirs-MacBook-Air calculator % git remote add origin https://github.com/mihirpkshah/dtl-lab-calculator.git
+git branch -M main
+git push -u origin main
+
+error: remote origin already exists.
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 4.10 KiB | 4.10 MiB/s, done.
+Total 11 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/mihirpkshah/dtl-lab-calculator.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+(base) mihir@Mihirs-MacBook-Air calculator % 
